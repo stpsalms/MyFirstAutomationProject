@@ -1,0 +1,695 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Verify that admin users search panel filters users correctly",
+        "description": "",
+        "id": "admin-user;verify-that-admin-users-search-panel-filters-users-correctly",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 21318815800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am logged in",
+            "match": {
+              "location": "Adm_searchUserTest.iAmLoggedIn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3010943000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click the admin menu",
+            "match": {
+              "location": "Adm_searchUserTest.iClickTheAdminMenu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3098238700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I should see the users page",
+            "match": {
+              "location": "Adm_searchUserTest.iShouldSeeTheUsersPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2320484500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter user data",
+            "match": {
+              "location": "Adm_searchUserTest.iEnterUserData()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3184096500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click on the search button",
+            "match": {
+              "location": "Adm_searchUserTest.iClickOnTheSearchButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 163806300,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Alice.Duval]\u003e but was:\u003c[]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat Pages.admin_pages.AssertSearchresult(admin_pages.java:77)\r\n\tat Step_Definition.Adm_searchUserTest.searchResultShouldReturnTheCorrectUser(Adm_searchUserTest.java:66)\r\n\tat ✽.Then Search result should return the correct user(Adm_searchUser.feature:10)\r\n",
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "Search result should return the correct user",
+            "match": {
+              "location": "Adm_searchUserTest.searchResultShouldReturnTheCorrectUser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Admin User",
+    "description": "",
+    "id": "admin-user",
+    "keyword": "Feature",
+    "uri": "Adm_searchUser.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Verify that the application logo is displayed on the home page",
+        "description": "",
+        "id": "home-page;verify-that-the-application-logo-is-displayed-on-the-home-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14736162600,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on the home page",
+            "match": {
+              "location": "HomePageTest.i_am_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 280364000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I should see the application logo",
+            "match": {
+              "location": "HomePageTest.i_should_see_the_application_logo()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Home page",
+    "description": "",
+    "id": "home-page",
+    "keyword": "Feature",
+    "uri": "HomePage.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 13,
+        "name": "Login with invalid credentials should return error message",
+        "description": "",
+        "id": "login;login-with-invalid-credentials-should-return-error-message;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 17177954000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I get to the home page",
+            "match": {
+              "location": "InvalidLoginTest.iGetToTheHomePage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1420900900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter \"Maggie\" in the username field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Maggie",
+                  "offset": 9
+                }
+              ],
+              "location": "InvalidLoginTest.iEnterInTheUsernameField(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 955232700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter \"admin123\" in the password field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin123",
+                  "offset": 9
+                }
+              ],
+              "location": "InvalidLoginTest.iEnterInThePasswordField(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2413135600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on the login",
+            "match": {
+              "location": "InvalidLoginTest.iClickOnTheLogin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 163213600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I should get the correct \"Invalid credentials\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Invalid credentials",
+                  "offset": 26
+                }
+              ],
+              "location": "InvalidLoginTest.iShouldGetTheCorrect(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Login with invalid credentials should return error message",
+        "description": "",
+        "id": "login;login-with-invalid-credentials-should-return-error-message;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 33737027600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I get to the home page",
+            "match": {
+              "location": "InvalidLoginTest.iGetToTheHomePage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1073580900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter \"Admin\" in the username field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Admin",
+                  "offset": 9
+                }
+              ],
+              "location": "InvalidLoginTest.iEnterInTheUsernameField(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 431221800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter \"admintesting\" in the password field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admintesting",
+                  "offset": 9
+                }
+              ],
+              "location": "InvalidLoginTest.iEnterInThePasswordField(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2335403600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on the login",
+            "match": {
+              "location": "InvalidLoginTest.iClickOnTheLogin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 269650600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I should get the correct \"Invalid credentials\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Invalid credentials",
+                  "offset": 26
+                }
+              ],
+              "location": "InvalidLoginTest.iShouldGetTheCorrect(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Login with invalid credentials should return error message",
+        "description": "",
+        "id": "login;login-with-invalid-credentials-should-return-error-message;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 17427405800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I get to the home page",
+            "match": {
+              "location": "InvalidLoginTest.iGetToTheHomePage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1183438300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter \"Maggie\" in the username field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Maggie",
+                  "offset": 9
+                }
+              ],
+              "location": "InvalidLoginTest.iEnterInTheUsernameField(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1202307800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter \"admintesting\" in the password field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admintesting",
+                  "offset": 9
+                }
+              ],
+              "location": "InvalidLoginTest.iEnterInThePasswordField(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3950204900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on the login",
+            "match": {
+              "location": "InvalidLoginTest.iClickOnTheLogin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 711824900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I should get the correct \"Invalid credentials\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Invalid credentials",
+                  "offset": 26
+                }
+              ],
+              "location": "InvalidLoginTest.iShouldGetTheCorrect(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "InvalidLogin.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Login with invalid credentials should not be successful",
+        "description": "",
+        "id": "login;login-with-invalid-credentials-should-not-be-successful",
+        "type": "scenario",
+        "keyword": "Scenario"
+      },
+      {
+        "line": 5,
+        "name": "I enter Valid password",
+        "description": "",
+        "id": "login;i-enter-valid-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 22094604800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "i am on the homepage",
+            "match": {
+              "location": "InvalidLogin1Test.iAmOnTheHomepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 450980800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter invalid username",
+            "match": {
+              "location": "InvalidLogin1Test.iEnterInvalidUsername()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 459635000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter valid Password",
+            "match": {
+              "location": "InvalidLogin1Test.iEnterValidPassword()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2265320300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I press the login button",
+            "match": {
+              "location": "InvalidLogin1Test.iPressTheLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "my login should not be successful",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "InvalidLogin1.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User with wrong password should not able to login",
+        "description": "",
+        "id": "login;user-with-wrong-password-should-not-able-to-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17715905300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I get to the login",
+            "match": {
+              "location": "InvalidLogin2Test.iGetToTheLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 34936900,
+              "error_message": "org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace\u003dBacktrace:\n\tGetHandleVerifier [0x00DD8893+48451]\n\t(No symbol) [0x00D6B8A1]\n\t(No symbol) [0x00C74F20]\n\t(No symbol) [0x00C977AC]\n\t(No symbol) [0x00CBA1B6]\n\t(No symbol) [0x00CB6C2D]\n\t(No symbol) [0x00CB669A]\n\t(No symbol) [0x00C55301]\n\t(No symbol) [0x00C5570E]\n\t(No symbol) [0x00C55AEA]\n\tGetHandleVerifier [0x01038E3A+2540266]\n\tGetHandleVerifier [0x01078959+2801161]\n\tGetHandleVerifier [0x0107295C+2776588]\n\tGetHandleVerifier [0x00E62280+612144]\n\t(No symbol) [0x00D74F6C]\n\t(No symbol) [0x00C54F5A]\n\t(No symbol) [0x00C54959]\n\tGetHandleVerifier [0x0109FD7C+2961964]\n\tBaseThreadInitThunk [0x75967D59+25]\n\tRtlInitializeExceptionChain [0x76F2B74B+107]\n\tRtlClearBits [0x76F2B6CF+191]\n, error\u003dinvalid session id, message\u003dinvalid session id}\nBuild info: version: \u00273.0.1\u0027, revision: \u00271969d75\u0027, time: \u00272016-10-18 09:49:13 -0700\u0027\nSystem info: host: \u0027DESKTOP-1VOOGF4\u0027, ip: \u0027192.168.1.140\u0027, os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.18\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:449)\r\n\tat org.openqa.selenium.By$ByName.findElement(By.java:303)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)\r\n\tat Step_Definition.InvalidLogin2Test.iTypeInCorrectUsername(InvalidLogin2Test.java:26)\r\n\tat ✽.When I type in correct username(InvalidLogin2.feature:6)\r\nCaused by: java.lang.ClassCastException: class com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to class org.openqa.selenium.WebElement (com.google.common.collect.Maps$TransformedEntriesMap and org.openqa.selenium.WebElement are in unnamed module of loader \u0027app\u0027)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:449)\r\n\tat org.openqa.selenium.By$ByName.findElement(By.java:303)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)\r\n\tat Step_Definition.InvalidLogin2Test.iTypeInCorrectUsername(InvalidLogin2Test.java:26)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)\r\n",
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "I type in correct username",
+            "match": {
+              "location": "InvalidLogin2Test.iTypeInCorrectUsername()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "I type in incorrect password",
+            "match": {
+              "location": "InvalidLogin2Test.iTypeInIncorrectPassword()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I click the login",
+            "match": {
+              "location": "InvalidLogin2Test.iClickTheLogin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "My loggin attempt should fail",
+            "match": {
+              "location": "InvalidLogin2Test.myLogginAttemptShouldFail()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "InvalidLogin2.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "verify that user with valid login credentials can login successfully",
+        "description": "",
+        "id": "login;verify-that-user-with-valid-login-credentials-can-login-successfully",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17104642100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the landing page",
+            "match": {
+              "location": "ValidLoginTest.iAmOnTheLandingPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 321377100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter username in the username field",
+            "match": {
+              "location": "ValidLoginTest.iEnterUsernameInTheUsernameField()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 316048700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter password in the password field",
+            "match": {
+              "location": "ValidLoginTest.iEnterPasswordInThePasswordField()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6364999300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click the login button",
+            "match": {
+              "location": "ValidLoginTest.iClickTheLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 308022400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I should be successfully logged in",
+            "match": {
+              "location": "ValidLoginTest.iShouldBeSuccessfullyLoggedIn()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13232778800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I can logout",
+            "match": {
+              "location": "ValidLoginTest.iCanLogout()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "ValidLogin.feature"
+  }
+]
